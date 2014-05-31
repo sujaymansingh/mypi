@@ -54,4 +54,4 @@ A nice example set up:
 
 ## Github auth
 
-It works by runnign lots of `git` calls under the hood. If you have private repos, then you should set up ssh keys to github.
+It works by running lots of `git` calls under the hood. If you have private repos, then you should set up ssh keys to github.
