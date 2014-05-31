@@ -177,7 +177,7 @@ def get_package_details(repo, branch):
         # Use -n to ensure we don't checkout any files
         repo = git.Repo.clone_from(repo, working_dir, n=True, branch=branch)
         # Checkout just setup.py
-        repo.git.checkout("head", "setup.py")
+        repo.git.checkout("HEAD", "setup.py")
         return extract_package_details(os.path.join(working_dir, "setup.py"))
     finally:
         shutil.rmtree(working_dir)
