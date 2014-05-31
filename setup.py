@@ -10,7 +10,7 @@ REQUIREMENTS = [
 if __name__ == "__main__":
     setuptools.setup(
         name="mypi",
-        version="0.0.1",
+        version="0.0.2",
         author="Sujay Mansingh",
         author_email="sujay.mansingh@gmail.com",
         packages=setuptools.find_packages(),
