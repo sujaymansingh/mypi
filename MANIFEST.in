@@ -1,0 +1,2 @@
+recursive-include mypi/templates *
+recursive-include mypi/static *

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title }}</title>
+
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
+
+
+    <body>
+
+        <div class="container">
+            <div class="page-header">
+                <h1>{{ title }}</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <ul class="list-unstyled">
+                    {% for package in packages %}
+                        <li>
+                            <h2>{{ package.name }}</h2>
+
+                            <ul>
+                                {% for version in package.versions %}
+                                    <li>
+                                        <a href="{{version.url}}">
+                                            {{ version.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Instructions</h2>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <h4>Build whatever the latest version is</h4>
+                            <code>
+$ curl -X POST {{ url_base }}/ensure/github/$org/$repo
+                            </code>
+                        </li>
+
+                        <li>
+                            <h4>Build a specific tag</h4>
+                            <code>
+$ curl -X POST {{ url_base }}/ensure/github/$org/$repo/$tag
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
