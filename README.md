@@ -50,3 +50,7 @@ A nice example set up:
 * (note jenkins doesn't have to know about tags, it simply tells `mypi` to
    ensure that the latest package is available)
 * the latest package is automatically built and uploaded if all is well
+* 
+## Github auth
+
+It works by runnign lots of `git` calls under the hood. If you have private repos, then you should set up ssh keys to github.
