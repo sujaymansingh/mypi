@@ -2,11 +2,13 @@
 and building of packages.
 
 Usage:
-    mypi run-debug
+    mypi run-debug [--host=<h>] [--port=<p>]
     mypi (-h | --help)
 
 Options:
     -h --help              Show this screen
+    --host=<h>             The host on which to run [Default: 0.0.0.0]
+    --port=<p>             The port on which to run [Default: 5000]
 """
 import logging
 import os
@@ -99,8 +101,11 @@ def main():
     arguments = docopt.docopt(__doc__)
 
     if arguments.get("run-debug"):
+        host = arguments.get("--host")
+        port = int(arguments.get("--port"))
+
         logging.basicConfig(level=logging.DEBUG)
-        app.run(host="0.0.0.0", port=5000, debug=True)
+        app.run(host=host, port=port, debug=True)
 
 
 if __name__ == "__main__":
