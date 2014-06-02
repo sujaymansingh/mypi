@@ -10,7 +10,7 @@ python -m mypi run-debug
 
 This will start up a server on `localhost:5000`
 
-Now if you have a python project (i.e. one that is build using `setup.py`) on github, you can build it:
+Now if you have a python project (i.e. one that is built using `setup.py`) on github, you can build it:
 
 ```
 $ curl -X POST http://localhost:5000/ensure/github/sujaymansingh/mypi
