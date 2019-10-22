@@ -2,7 +2,7 @@ import setuptools
 
 REQUIREMENTS = [
     "docopt==0.6.1",
-    "Flask==0.10.1",
+    "Flask==1.0",
     "GitPython==0.3.2.RC1",
     "semantic_version==2.3.0",
 ]
